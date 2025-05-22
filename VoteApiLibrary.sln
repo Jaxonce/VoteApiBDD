@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoteApiLibrary", "VoteApiLibrary\VoteApiLibrary.csproj", "{51DE1A44-328D-4961-A4EA-02DC27A11B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProjectVoteApi", "SpecFlowProjectVoteApi\SpecFlowProjectVoteApi.csproj", "{8BDB18A3-A6EF-4E3C-87C9-DB2E07F419D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51DE1A44-328D-4961-A4EA-02DC27A11B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51DE1A44-328D-4961-A4EA-02DC27A11B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51DE1A44-328D-4961-A4EA-02DC27A11B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51DE1A44-328D-4961-A4EA-02DC27A11B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDB18A3-A6EF-4E3C-87C9-DB2E07F419D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDB18A3-A6EF-4E3C-87C9-DB2E07F419D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDB18A3-A6EF-4E3C-87C9-DB2E07F419D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDB18A3-A6EF-4E3C-87C9-DB2E07F419D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
