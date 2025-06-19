@@ -105,13 +105,20 @@ public class VoteStepDefinition
         _result!.IsTie.Should().BeTrue();
     }
 
-    [Then(@"the qualified candidates should be ""(.*)"" and ""(.*)""")]
-    public void ThenTheQualifiedCandidatesShouldBeAnd(string candidate1, string candidate2)
+    [Then(@"the qualified candidates should be ""([^""]*)"" and ""([^""]*)""")]
+    public void ThenTheQualifiedCandidatesShouldBeTwoCandidates(string candidate1, string candidate2)
     {
         _result.Should().NotBeNull();
-        var topTwoCandidates = _result!.Candidates.Take(2).ToList();
-        topTwoCandidates.Should().HaveCount(2);
-        topTwoCandidates.Select(c => c.Name).Should().Contain(new[] { candidate1, candidate2 });
+        _result!.QualifiedCandidates.Should().HaveCount(2);
+        _result.QualifiedCandidates.Select(c => c.Name).Should().Contain(new[] { candidate1, candidate2 });
+    }
+
+    [Then(@"the qualified candidates should be ""([^""]*)"", ""([^""]*)"" and ""([^""]*)""")]
+    public void ThenTheQualifiedCandidatesShouldBeThreeCandidates(string candidate1, string candidate2, string candidate3)
+    {
+        _result.Should().NotBeNull();
+        _result!.QualifiedCandidates.Should().HaveCount(3);
+        _result.QualifiedCandidates.Select(c => c.Name).Should().Contain(new[] { candidate1, candidate2, candidate3 });
     }
 
     [Then(@"the candidate ""(.*)"" should have (.*)% of votes")]

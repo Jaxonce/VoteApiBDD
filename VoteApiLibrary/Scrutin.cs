@@ -6,6 +6,7 @@ public class Scrutin
     public ScrutinStatus Status { get; private set; } = ScrutinStatus.Open;
     public IReadOnlyList<Candidate> Candidates => _candidates.AsReadOnly();
     public int Round { get; private set; } = 1;
+    public const string VoteBlancName = "Vote Blanc";
 
     public void AddCandidate(string candidateName)
     {
@@ -58,5 +59,15 @@ public class Scrutin
         {
             candidate.CalculatePercentage(totalVotes);
         }
+    }
+
+    public IEnumerable<Candidate> GetValidCandidates()
+    {
+        return _candidates.Where(c => c.Name != VoteBlancName);
+    }
+
+    public Candidate? GetVoteBlancCandidate()
+    {
+        return _candidates.FirstOrDefault(c => c.Name == VoteBlancName);
     }
 }
